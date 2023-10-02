@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8nw4h12obdha"]
+
+[ext_resource type="Script" path="res://grass_field/bezier_curve.gd" id="1_ogafi"]
+
+[node name="BezierCurve" type="Line2D"]
+script = ExtResource("1_ogafi")

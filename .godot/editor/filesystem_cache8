@@ -1,0 +1,16 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1696248980
+::res://grass_field/::1690449948
+bezier_curve.gd::GDScript::-1::1683833224::0::1::::BezierCurve<>Line2D<>::
+bezier_curve.tscn::PackedScene::7117298089182026050::1690449948::0::1::::<><>::res://grass_field/bezier_curve.gd
+grass_blade.gd::GDScript::-1::1684006654::0::1::::<>Node2D<>::
+grass_blade.tscn::PackedScene::8970118632026399355::1690449948::0::1::::<><>::res://grass_field/grass_blade.gd
+grass_field.gd::GDScript::-1::1684005914::0::1::::<>Node2D<>::
+grass_field.tscn::PackedScene::561058384969525222::1690449948::0::1::::<><>::res://grass_field/grass_field.gd
+::res://grass_tilemap/::1690449948
+grass_tilemap.gd::GDScript::-1::1684013214::0::1::::<>TileMap<>::
+grass_tilemap.tscn::PackedScene::7848676094414841809::1690449948::0::1::::<><>::uid://bl3f5flim1qco::::res://grass_tilemap/placeholder.png<>res://grass_tilemap/grass_tilemap.gd
+placeholder.png::CompressedTexture2D::3216657979596269410::1684007148::1684237118::1::::<><>::
+::res://tmp/::1690449948
+test_world.gd::GDScript::-1::1684013432::0::1::::<>Node2D<>::
+test_world.tscn::PackedScene::3662766123777767985::1690449948::0::1::::<><>::res://tmp/test_world.gd<>uid://dj27swe7u6qgn::::res://grass_tilemap/grass_tilemap.tscn

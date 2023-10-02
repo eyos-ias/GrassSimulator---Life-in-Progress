@@ -1,0 +1,86 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsgjhtxyoetqf"]
+
+[ext_resource type="Script" path="res://tmp/test_world.gd" id="1_le8we"]
+[ext_resource type="PackedScene" uid="uid://dj27swe7u6qgn" path="res://grass_tilemap/grass_tilemap.tscn" id="2_d6s2w"]
+
+[node name="TestWorld" type="Node2D"]
+script = ExtResource("1_le8we")
+
+[node name="Control" type="Control" parent="."]
+custom_minimum_size = Vector2(600, 300)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 600.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "horizontal stretch"
+
+[node name="windx" type="HSlider" parent="Control/Panel/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -100.0
+value = 10.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "vertical stretch"
+
+[node name="windy" type="HSlider" parent="Control/Panel/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+min_value = -100.0
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control/Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "vibrations"
+
+[node name="stretchradius" type="HSlider" parent="Control/Panel/VBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+max_value = 20.0
+value = 20.0
+
+[node name="GrassTilemap" parent="." instance=ExtResource("2_d6s2w")]
+layer_0/tile_data = PackedInt32Array(1703954, 0, 0, 1703955, 0, 0, 1703956, 0, 0, 1703957, 0, 0, 1703958, 0, 0, 1703959, 0, 0, 1703960, 0, 0, 1703961, 0, 0, 1703962, 0, 0, 1703963, 0, 0, 1703964, 0, 0, 1703965, 0, 0, 1703966, 0, 0, 1703967, 0, 0, 1703968, 0, 0, 1703969, 0, 0, 1703970, 0, 0, 1703976, 0, 0, 1703977, 0, 0, 1703978, 0, 0, 1703979, 0, 0, 1703980, 0, 0, 1703981, 0, 0, 1703982, 0, 0, 1703983, 0, 0, 1703988, 0, 0, 1703989, 0, 0, 1638454, 0, 0, 1638455, 0, 0, 1638456, 0, 0, 1638457, 0, 0, 1638458, 0, 0, 1638459, 0, 0)
+
+[connection signal="value_changed" from="Control/Panel/VBoxContainer/HBoxContainer/windx" to="." method="_on_windx_value_changed"]
+[connection signal="value_changed" from="Control/Panel/VBoxContainer/HBoxContainer2/windy" to="." method="_on_windy_value_changed"]
+[connection signal="value_changed" from="Control/Panel/VBoxContainer/HBoxContainer3/stretchradius" to="." method="_on_stretchradius_value_changed"]

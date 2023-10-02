@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://d02gsqcunmtd0"]
+
+[ext_resource type="Script" path="res://grass_field/grass_blade.gd" id="1_mrxxx"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ke8rt"]
+
+[node name="GrassBlade" type="Node2D"]
+material = SubResource("ShaderMaterial_ke8rt")
+position = Vector2(0, -1)
+script = ExtResource("1_mrxxx")
+length = 101
